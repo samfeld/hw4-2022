@@ -2,12 +2,18 @@ body{
     margin: 0;
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
+    font-family: "Poppins", serif;
+    background-image: url( “concrete_seamless.png”);
+    background-color: #f1f1f1;
   }
   
   header{
     background: #fff;
     border-bottom: 3px solid #50C7C7;
-    margin-bottom:20px
+    margin-bottom:20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
   }
   
   h1{
