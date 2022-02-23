@@ -108,7 +108,7 @@ body{
     flex-basis: 450px;
     flex-direction: column;
     justify-content: center;
-
+    z-index: 0;
   }
 
   .card > ul{
@@ -178,6 +178,7 @@ body{
       }
       header:first-of-type{
         position: sticky;
+        z-index: 1;
         top: 0;
       }
     }
@@ -192,7 +193,7 @@ body{
       flex-direction: row;
       justify-content:space-around;
     }
-    .card li:last-child::after{
+    .card li:nth-child(2)::after{
         	
       content: "\1F44D";
     }
