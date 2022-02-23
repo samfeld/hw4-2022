@@ -12,8 +12,10 @@ body{
     border-bottom: 3px solid #50C7C7;
     margin-bottom:20px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content:center;
+    justify-items: center;
+    align-items: center;
   }
   
   h1{
@@ -48,11 +50,19 @@ body{
     color: black;
     text-decoration-style: solid;
   }
+  .nav_item a:visited{
+    color:inherit;
+  }
   
   *:focus{
     border: 2px solid black;
   }
 
+  ul.nav_links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+  }
 
   .nav_item a{
     padding: 10px;
@@ -67,6 +77,23 @@ body{
 
   .pricing{
     min-height: 475px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+  .gallery img{
+    margin: 10px;
+    width: 300px;
+    border: #50C7C7 solid 10px;
   }
 
   .card {
@@ -74,12 +101,27 @@ body{
     background: #fff;
     border-radius: 7px;
     padding: 0 0 25px 0;
-  
+    display: flex;
+    flex-basis: 450px;
+    flex-direction: column;
+    justify-content: center;
+
   }
 
   .card > ul{
     list-style: none;
     padding-left: 5px;
+  
+
+  }
+
+  .card>header{
+    background-color: #288088;
+    border: 2px solid #45ADAD ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
   }
   
   .card > ul li {
@@ -111,5 +153,54 @@ body{
     padding: 30px;
     text-align: center;
   }
-
+@keyframes logo{
+  from{width: 25px;}
+  to {width: 475px;}
+  from{opacity: 0;}
+  to{opacity:1;}
+}
+    @media screen and (min-width: 900px){
+      header{
+        flex-direction: row;
+        justify-content:space-between;
+      }
+      ul.nav_links{
+        flex-direction:row;
+      }
+      .card{
+        flex-basis: 250px;
+      }
+      header:first-of-type{
+        position: sticky;
+        top: 0;
+      }
+    }
+  @media print{
+    ul.nav_links{
+      justify-content:space-between;
+    }
+    li:last-child::after{
+        	
+      content: "\1F44D";
+    }
+  }
   
+    @media screen and (prefers-reduced-motion){
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: none;
+      }
+      
+      .card{
+        border: #45ADDD solid 2px;
+        flex-basis: 325px;
+      }
+      .pricing{
+        position: absolute;
+        bottom: 0;
+      }
+      .gallery{
+        visibility: hidden;
+      }
+      
+    }
