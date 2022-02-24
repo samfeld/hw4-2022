@@ -205,6 +205,7 @@ body{
     #gallery, .gallery{
       display: none;
     }
+   
   }
   
     @media screen and (prefers-reduced-motion){
@@ -217,10 +218,7 @@ body{
         border: #45ADDD solid 2px;
         flex-basis: 325px;
       }
-      .pricing{
-        position: absolute;
-        bottom: 0;
-      }
+     
     #logo{
       animation: none;
 
