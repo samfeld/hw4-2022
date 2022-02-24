@@ -41,10 +41,9 @@ header{
     padding-bottom: 20px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    position: relative;
     z-index:0;
   }
-  
+
   .gallery{
     display: flex;
     flex-direction: row;
