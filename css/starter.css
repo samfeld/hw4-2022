@@ -125,6 +125,7 @@ body{
     padding-bottom: 20px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    position: relative;
     z-index:0;
   }
   
@@ -177,7 +178,7 @@ body{
       .card{
         flex-basis: 250px;
       }
-      header:first-of-type{
+      body> header:first-of-type{
         position: sticky;
         z-index: 1;
         top: 0;
